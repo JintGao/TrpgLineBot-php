@@ -77,9 +77,14 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName,$goo
         // 將Google表單轉成JSON資料
         $json = file_get_contents($googledataspi);
         $data = json_decode($json, true);     
-		$store_text='456789'; 
+		$store_text=''; 
+
+			foreach ($data['feed']['entry'] as $item) {
+	            // 將keywords欄位依,切成陣列
+	            $keywords = explode(',', $item['content']['$t']);
+	        }
 		
-		return buildTextMessage($store_text);
+		return buildTextMessage($keywords);
 
 	}
 
