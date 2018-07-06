@@ -75,8 +75,9 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName) {
 	if(stristr($inputStr, '托尼') != false) {
 		$googledataspi = "https://spreadsheets.google.com/feeds/list/1-VL6Fl88f2iBIv3vIqjMbHQZFjSzGJRkKWnHp8gqRQE/od6/public/values?alt=json";
 
-	
-		return buildTextMessage($googledataspi);
+		$json = file_get_contents($googledataspi);
+		
+		return buildTextMessage($json);
 
 	}
 
