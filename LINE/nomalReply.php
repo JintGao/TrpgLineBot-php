@@ -73,19 +73,13 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName,$goo
 
 	//讀取Google表單
 	if(stristr($inputStr, '托尼') != false) {
-		
-		$file = fopen("https://www.dropbox.com/s/h9m9lfhj8pvlu8k/updated.txt?dl=1", "r");
-		$reply = '';
 
-		//輸出文本中所有的行，直到文件結束為止。
-		while(! feof($file))
-		{
-			$reply =  $reply.fgets($file);
-		}
-		//當讀出文件一行後，就在後面加上 <br> 讓html知道要換行
-		fclose($file);
+        // 將Google表單轉成JSON資料
+        $json = file_get_contents($googledataspi);
+        $data = json_decode($json, true);     
+		$store_text=''; 
 		
-		return buildTextMessage($reply);
+		return buildTextMessage($data);
 
 	}
 
