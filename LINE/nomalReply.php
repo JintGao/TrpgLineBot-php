@@ -79,7 +79,7 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName,$goo
         $data = json_decode($json, true);     
 		$store_text=''; 
 
-	    $keywords = $data['feed']['entry']['content']['$t'];
+	    $keywords = $data['feed']['entry'][0]['content']['$t'];
 	        
 		
 		return buildTextMessage($keywords);
