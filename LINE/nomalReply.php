@@ -83,14 +83,21 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName) {
 
 		if (count($rplyArr) == 1) {return buildTextMessage('選擇的格式不對啦！');}	
 
+		if($rplyArr[2]  == '全部')
+		{
 			foreach ($data['feed']['entry'] as $item) 
 			{    
-				if($rplyArr[2]  == $item['gsx$姓名']['$t'])
+				if($rplyArr[3]  == $item['gsx$姓名']['$t'])
 				{                
                 	$store_text = $item['content']['$t'];
                 }                 
 			}
-		
+			if($store_text == '')
+			{
+				$store_text = '沒有這個人喔!';
+			}
+		}
+
 		return buildTextMessage($store_text);
 
 	}
