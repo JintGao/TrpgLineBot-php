@@ -33,7 +33,6 @@ $textReplyUrl = getenv('TEXT_REPLY_URL');
 $imgsReplyUrl = getenv('IMGS_REPLY_URL');
 $yababangUrl = getenv('YABABANG_URL');
 //GOOGLE表單
-$googledataspi = "https://spreadsheets.google.com/feeds/list/1-VL6Fl88f2iBIv3vIqjMbHQZFjSzGJRkKWnHp8gqRQE/od6/public/values?alt=json";
 $bot = new LINEBotTiny($channelAccessToken, $channelSecret);
 $userName = '你';
 
@@ -279,7 +278,7 @@ function parseInput ($inputStr){
 		return pbta($inputStr);
 		
 	}else if(stristr($inputStr,$keyWord) != false){ //$keyWord
-		return KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName,$googledataspi);
+		return KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName);
 				
 	}else if(stristr($inputStr,".jpg") != false || stristr($inputStr,"ry") != false){
 		return SendImg($inputStr,$imgsReplyUrl);
