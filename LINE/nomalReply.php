@@ -79,10 +79,22 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName,$goo
         $data = json_decode($json, true);     
 		$store_text=''; 
 
-	    $keywords = $data['feed']['entry'][0]['content']['$t'];
-	        
+			foreach ($data['feed']['entry'] as $item) {
+	            // 將keywords欄位依,切成陣列
+	            $keywords = explode(',', $item['gsx$keywords']['$t']);
+
+           		 // 以關鍵字比對文字內容，符合的話將店名/地址寫入
+           		 foreach ($keywords as $keyword) {
+            	          
+		           if (mb_strpos($message['text'], $keyword) !== false) {                      
+		                   $store_text = $item['gsx$姓名']['$t']." 姓名是:".$item['gsx$背景']['$t'];                 
+		            }           	                         
+                	                
+      	   	
+				}
+			}
 		
-		return buildTextMessage($keywords);
+		return buildTextMessage($store_text);
 
 	}
 
