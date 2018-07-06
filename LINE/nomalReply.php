@@ -74,23 +74,19 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName,$goo
 	//讀取Google表單
 	if(stristr($inputStr, '托尼') != false) {
 		
-        // 將Google表單轉成JSON資料
-        $json = file_get_contents($googledataspi);
-        $data = json_decode($json, true);     
-		$store_text=''; 
+		$file = fopen("https://www.dropbox.com/s/h9m9lfhj8pvlu8k/updated.txt?dl=1", "r");
+		$reply = '';
 
-			foreach ($data['feed']['entry'] as $item) {
-	            // 將keywords欄位依,切成陣列
-	            $keywords = explode(',', $item['gsx$keywords']['$t']);
-
-           		 // 以關鍵字比對文字內容，符合的話將店名/地址寫入
-           		 foreach ($keywords as $keyword) {
-            	                         
-                	$store_text = $item['gsx$姓名']['$t']." 姓名是:".$item['gsx$背景']['$t'];                 
-      	   	
-				}
+		//輸出文本中所有的行，直到文件結束為止。
+		while(! feof($file))
+		{
+			$reply =  $reply.fgets($file);
+		}
+		//當讀出文件一行後，就在後面加上 <br> 讓html知道要換行
+		fclose($file);
 		
-		return buildTextMessage($store_text);
+		return buildTextMessage($reply);
+
 	}
 
 	
