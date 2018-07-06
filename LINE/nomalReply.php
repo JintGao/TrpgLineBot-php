@@ -71,6 +71,22 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName) {
 		return buildTextMessage($reply);
 	}
 	
+	//讀取Google表單
+	if(stristr($inputStr, '角色資訊') != false) {
+		
+		$file = fopen("https://spreadsheets.google.com/feeds/list/1-VL6Fl88f2iBIv3vIqjMbHQZFjSzGJRkKWnHp8gqRQE/od6/public/values?alt=json", "r");
+		$reply = '';
+
+		//輸出文本中所有的行，直到文件結束為止。
+		while(! feof($file))
+		{
+			$reply =  $reply.fgets($file);
+		}
+		//當讀出文件一行後，就在後面加上 <br> 讓html知道要換行
+		fclose($file);
+		
+		return buildTextMessage($reply);
+	}
           
     //幫我選～～
 	if(stristr($inputStr, '選') != false||
