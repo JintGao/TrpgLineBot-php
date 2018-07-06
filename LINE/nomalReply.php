@@ -77,9 +77,9 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName,$goo
         // 將Google表單轉成JSON資料
         $json = file_get_contents($googledataspi);
         $data = json_decode($json, true);     
-		$store_text=''; 
+		$store_text='456789'; 
 		
-		return buildTextMessage($data);
+		return buildTextMessage($store_text);
 
 	}
 
