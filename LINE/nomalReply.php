@@ -72,19 +72,23 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName) {
 	}
 
 	//讀取Google表單
-	if(stristr($inputStr, '托尼') != false) {
+	if(stristr($inputStr, '角色資訊') != false) {
 		$googledataspi = "https://spreadsheets.google.com/feeds/list/1-VL6Fl88f2iBIv3vIqjMbHQZFjSzGJRkKWnHp8gqRQE/od6/public/values?alt=json";
 
 		$json = file_get_contents($googledataspi);
         $data = json_decode($json, true);     
-		$store_text=''; 
+        $store_text=''; 
 
-			foreach ($data['feed']['entry'] as $item) 
-			{                    
-                $store_text = "背景是:".$item['gsx$背景']['$t'];                 
-			}
+        $rplyArr = explode(' ',$inputStr);
+
+		if (count($rplyArr) == 1) {return buildTextMessage('選擇的格式不對啦！');}	
+
+			//foreach ($data['feed']['entry'] as $item) 
+			//{                    
+            //    $store_text = "背景是:".$item['gsx$背景']['$t'];                 
+			//}
 		
-		return buildTextMessage($store_text);
+		return buildTextMessage($rplyArr[1]);
 
 	}
 
