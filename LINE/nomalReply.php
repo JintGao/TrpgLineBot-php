@@ -76,8 +76,15 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName) {
 		$googledataspi = "https://spreadsheets.google.com/feeds/list/1-VL6Fl88f2iBIv3vIqjMbHQZFjSzGJRkKWnHp8gqRQE/od6/public/values?alt=json";
 
 		$json = file_get_contents($googledataspi);
+        $data = json_decode($json, true);     
+		$store_text=''; 
+
+			foreach ($data['feed']['entry'] as $item) 
+			{                    
+                $store_text = "背景是:".$item['gsx$背景']['$t'];                 
+			}
 		
-		return buildTextMessage($json);
+		return buildTextMessage($store_text);
 
 	}
 
