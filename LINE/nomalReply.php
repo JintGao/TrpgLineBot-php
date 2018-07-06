@@ -74,20 +74,8 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName,$goo
 	//讀取Google表單
 	if(stristr($inputStr, '托尼') != false) {
 
-        // 將Google表單轉成JSON資料
-        $json = file_get_contents($googledataspi);
-        $data = json_decode($json, true);     
-		$store_text=''; 
-		error_log($json,1,"jinnit28021@gmail.com");
-		error_log($data,1,"jinnit28021@gmail.com");
-			foreach ($data['feed']['entry'] as $item) {
-                	
-		           $store_text = $item['gsx$背景']['$t'];          
-
-				}
-			}
-		
-		return buildTextMessage($store_text);
+	
+		return buildTextMessage($googledataspi);
 
 	}
 
