@@ -94,16 +94,6 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName) {
 			}
 
 		}
-		else
-		{
-			foreach ($data['feed']['entry'] as $item) 
-			{    
-				if($rplyArr[3]  == $item['gsx$姓名']['$t'])
-				{ 
-                	$store_text = $item[gsx$.$rplyArr[2]]['$t'];        
-                }       
-			}
-		}
 
 
 		if($store_text == '')
