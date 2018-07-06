@@ -85,7 +85,7 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName) {
 
 			foreach ($data['feed']['entry'] as $item) 
 			{    
-				if($rplyArr[2]  == $item['gsx$姓名'])
+				if($rplyArr[2]  == $item['gsx$姓名']['$t'])
 				{                
                 	$store_text = $item['content']['$t'];
                 }                 
