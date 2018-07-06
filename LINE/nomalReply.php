@@ -79,10 +79,8 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName,$goo
         $data = json_decode($json, true);     
 		$store_text=''; 
 
-			foreach ($data['feed']['entry'] as $item) {
-	            // 將keywords欄位依,切成陣列
-	            $keywords = explode(',', $item['content']['$t']);
-	        }
+	    $keywords = explode(',', $item['content']['$t']);
+	        
 		
 		return buildTextMessage($keywords);
 
