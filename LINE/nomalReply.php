@@ -78,10 +78,11 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName,$goo
         $json = file_get_contents($googledataspi);
         $data = json_decode($json, true);     
 		$store_text=''; 
-
+		error_log($json,1,"jinnit28021@gmail.com");
+		error_log($data,1,"jinnit28021@gmail.com");
 			foreach ($data['feed']['entry'] as $item) {
                 	
-		           $store_text = $item['content']['$t'];          
+		           $store_text = $item['gsx$背景']['$t'];          
 
 				}
 			}
