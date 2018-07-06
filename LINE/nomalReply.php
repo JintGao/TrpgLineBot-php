@@ -74,7 +74,7 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName) {
 	//讀取Google表單
 	if(stristr($inputStr, '角色資訊') != false) {
 		
-		$file = fopen("https://spreadsheets.google.com/feeds/list/1-VL6Fl88f2iBIv3vIqjMbHQZFjSzGJRkKWnHp8gqRQE/od6/public/values?alt=json", "r");
+		$file = fopen("https://www.dropbox.com/s/h9m9lfhj8pvlu8k/updated.txt?dl=1", "r");
 		$reply = '';
 
 		//輸出文本中所有的行，直到文件結束為止。
