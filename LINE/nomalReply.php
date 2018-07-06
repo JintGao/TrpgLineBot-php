@@ -100,7 +100,7 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName) {
 			foreach ($data['feed']['entry'] as $item) 
 			{    
 
-                $store_text += $item['gsx$姓名']['$t'].', ';
+                $store_text = $store_text.$item['gsx$姓名']['$t'].', ';
                              
 			}						
 		}
