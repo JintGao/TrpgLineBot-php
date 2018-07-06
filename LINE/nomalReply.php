@@ -92,11 +92,24 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName) {
                 	$store_text = $item['content']['$t'];
                 }                 
 			}
-			if($store_text == '')
-			{
-				$store_text = '沒有這個人喔!';
+
+		}
+		else
+		{
+			foreach ($data['feed']['entry'] as $item) 
+			{    
+				if($rplyArr[3]  == $item['gsx$姓名']['$t'])
+				{ 
+                	$store_text = $item[gsx$.$rplyArr[2]]['$t'];        
+                }       
 			}
 		}
+
+
+		if($store_text == '')
+		{
+			$store_text = '呱，沒有這個人或索取的資料喔，建議用 "角色資訊 全部 角色名稱" ，查欄位資料!';
+		}		
 
 		return buildTextMessage($store_text);
 
