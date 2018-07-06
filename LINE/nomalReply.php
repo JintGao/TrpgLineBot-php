@@ -80,17 +80,9 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName,$goo
 		$store_text=''; 
 
 			foreach ($data['feed']['entry'] as $item) {
-	            // 將keywords欄位依,切成陣列
-	            $keywords = explode(',', $item['gsx$keywords']['$t']);
+                	
+		           $store_text = $item['content']['$t'];          
 
-           		 // 以關鍵字比對文字內容，符合的話將店名/地址寫入
-           		 foreach ($keywords as $keywordss) {
-            	          
-		           if (mb_strpos($message['text'], $keywordss) !== false) {                      
-		                   $store_text = $item['gsx$姓名']['$t']." 姓名是:".$item['gsx$背景']['$t'];                 
-		            }           	                         
-                	                
-      	   	
 				}
 			}
 		
