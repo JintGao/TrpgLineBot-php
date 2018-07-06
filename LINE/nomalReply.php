@@ -1,6 +1,6 @@
 <?php
 
-function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName,$googledataspi) { 
+function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName) { 
 	$inputStr = strtolower($inputStr);
 	
 	
@@ -73,6 +73,7 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName,$goo
 
 	//讀取Google表單
 	if(stristr($inputStr, '托尼') != false) {
+		$googledataspi = "https://spreadsheets.google.com/feeds/list/1-VL6Fl88f2iBIv3vIqjMbHQZFjSzGJRkKWnHp8gqRQE/od6/public/values?alt=json";
 
 	
 		return buildTextMessage($googledataspi);
