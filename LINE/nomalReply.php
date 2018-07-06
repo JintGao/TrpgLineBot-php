@@ -84,9 +84,9 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName,$goo
 	            $keywords = explode(',', $item['gsx$keywords']['$t']);
 
            		 // 以關鍵字比對文字內容，符合的話將店名/地址寫入
-           		 foreach ($keywords as $keyword) {
+           		 foreach ($keywords as $keywordss) {
             	          
-		           if (mb_strpos($message['text'], $keyword) !== false) {                      
+		           if (mb_strpos($message['text'], $keywordss) !== false) {                      
 		                   $store_text = $item['gsx$姓名']['$t']." 姓名是:".$item['gsx$背景']['$t'];                 
 		            }           	                         
                 	                
