@@ -95,6 +95,15 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName) {
 			}
 
 		}
+		elseif ($rplyArr[2]  == '有誰') 
+		{
+			foreach ($data['feed']['entry'] as $item) 
+			{    
+
+                $store_text += $item['gsx$姓名']['$t'].', ';
+                             
+			}						
+		}
 		else
 		{
 			$part = $rplyArr[2];
