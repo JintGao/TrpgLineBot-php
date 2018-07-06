@@ -59,6 +59,7 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName) {
 		
 		$file = fopen("https://www.dropbox.com/s/h9m9lfhj8pvlu8k/updated.txt?dl=1", "r");
 		$reply = '';
+		$part ='';
 
 		//輸出文本中所有的行，直到文件結束為止。
 		while(! feof($file))
@@ -94,7 +95,18 @@ function KeyWordReply($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName) {
 			}
 
 		}
+		else
+		{
+			$part = $rplyArr[2];
 
+			foreach ($data['feed']['entry'] as $item) 
+			{    
+				if($rplyArr[3]  == $item['gsx$姓名']['$t'])
+				{ 
+                	$store_text = $item['gsx$'.$part]['$t'];        
+                }       
+			}
+		}		
 
 		if($store_text == '')
 		{
