@@ -292,11 +292,11 @@ function parseInput ($inputStr){
 	}else if(stristr($inputStr, '判') !=false)
 	{
 
-		if(substr($inputStr,0,2 ) == '判+')
+		if(mb_substr('判+2',0,2,"utf-8") == '判+')
 		{
 			return nomalDiceRoller("2d6");
 		}
-		elseif (substr($inputStr,0,2 ) == '判-') 
+		elseif (mb_substr('判+2',0,2,"utf-8") == '判-') 
 		{
 			return nomalDiceRoller("2d6");
 		}
