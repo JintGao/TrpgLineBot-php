@@ -289,7 +289,7 @@ function parseInput ($inputStr){
 	}else if(preg_match ("/b/i", $inputStr) !=false){
 		return bDice($inputStr);
 
-	}else if(preg_match ("判+", $inputStr) !=false 
+	}else if(stristr($inputStr, '判+') !=false 
 			)
 	{
 		return nomalDiceRoller("2d6");
