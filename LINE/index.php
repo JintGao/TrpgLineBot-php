@@ -310,11 +310,11 @@ function parseInput ($inputStr){
 	{
 		if(substr($inputStr,0,2 ) == '*+')
 		{
-			return nomalDiceRoller("2d6");
+			return nomalDiceRoller("2d6".'+'.substr($inputStr,2,strlen($inputStr)) );
 		}
 		else if (substr($inputStr,0,2 ) == '*-') 
 		{
-			return nomalDiceRoller("2d6");
+			return nomalDiceRoller("2d6".'-'.substr($inputStr,2,strlen($inputStr)) );
 		}
 	}
 	
