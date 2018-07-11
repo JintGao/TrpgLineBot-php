@@ -301,7 +301,7 @@ function parseInput ($inputStr){
 			return nomalDiceRoller("2d6");
 		}
 
-	}else if(preg_match ("\*\+\d+", $inputStr) !=false)
+	}else if(preg_match ("/*/+/d+", $inputStr) !=false)
 	{
 
 			return nomalDiceRoller("2d6");
