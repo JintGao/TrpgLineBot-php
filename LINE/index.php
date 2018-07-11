@@ -289,10 +289,15 @@ function parseInput ($inputStr){
 	}else if(preg_match ("/b/i", $inputStr) !=false){
 		return bDice($inputStr);
 
-	}else if(stristr($inputStr, '判+') !=false 
+	}else if(stristr($inputStr, '判') !=false ||
+			 stristr($inputStr, '*') !=false ||
 			)
 	{
-		return nomalDiceRoller("2d6");
+
+		if(stristr($inputStr, '判+') !=false || stristr($inputStr, '*+') !=false)
+		{
+			return nomalDiceRoller("2d6");
+		}
 	}
 	
 	
