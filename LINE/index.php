@@ -296,10 +296,7 @@ function parseInput ($inputStr){
 		{
 			return nomalDiceRoller("2d6");
 		}
-		else if(mb_substr($inputStr,0,2,"utf-8")=='判-')
-		{
-			return nomalDiceRoller("2d6");
-		}
+
 	
 
 	}else if(stristr($inputStr, '*') !=false)
