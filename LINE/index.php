@@ -296,6 +296,11 @@ function parseInput ($inputStr){
 		{
 			return nomalDiceRoller("2d6");
 		}
+		elseif (stristr($inputStr, '判-') !=false) 
+		{
+			return nomalDiceRoller("2d6");
+		}
+
 	}
 	
 	
