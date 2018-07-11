@@ -292,22 +292,22 @@ function parseInput ($inputStr){
 	}else if(stristr($inputStr, '判') !=false)
 	{
 
-		if(stristr($inputStr, '判+') !=false)
+		if(substr($inputStr,0,1 ) != '判+')
 		{
 			return nomalDiceRoller("2d6");
 		}
-		elseif (stristr($inputStr, '判-') !=false) 
+		elseif (substr($inputStr,0,1 ) != '判-') 
 		{
 			return nomalDiceRoller("2d6");
 		}
 
 	}else if(stristr($inputStr, '*') !=false)
 	{
-		if(stristr($inputStr, '*+') !=false)
+		if(substr($inputStr,0,1 ) != '*+')
 		{
 			return nomalDiceRoller("2d6");
 		}
-		elseif (stristr($inputStr, '*-') !=false) 
+		elseif (substr($inputStr,0,1 ) != '*-') 
 		{
 			return nomalDiceRoller("2d6");
 		}
