@@ -301,10 +301,16 @@ function parseInput ($inputStr){
 			return nomalDiceRoller("2d6");
 		}
 
-	}else if(stristr($inputStr, '*+') !=false)
+	}else if(stristr($inputStr, '*') !=false)
 	{
-
+		if(stristr($inputStr, '*+') !=false)
+		{
 			return nomalDiceRoller("2d6");
+		}
+		elseif (stristr($inputStr, '*-') !=false) 
+		{
+			return nomalDiceRoller("2d6");
+		}
 	}
 	
 	
