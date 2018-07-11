@@ -295,12 +295,12 @@ function parseInput ($inputStr){
  	    if(substr($inputStr,0,4) == "判+")
 		{
 
-			return nomalDiceRoller("2d6");
+			return nomalDiceRoller("2d6").'+'.substr($inputStr,5,strlen($inputStr));
 
 		}else if (substr($inputStr,0,4) == '判-') 
 		{
 
-			return nomalDiceRoller("2d6");
+			return nomalDiceRoller("2d6").'-'.substr($inputStr,5,strlen($inputStr);
 
 		}
 
