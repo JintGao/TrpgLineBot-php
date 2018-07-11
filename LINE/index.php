@@ -303,6 +303,10 @@ function parseInput ($inputStr){
 			return nomalDiceRoller("2d6".'-'.substr($inputStr,4,strlen($inputStr)) ) ;
 
 		}
+		else
+		{
+			return nomalDiceRoller("2d6");
+		}
 
 	
 
@@ -315,6 +319,10 @@ function parseInput ($inputStr){
 		else if (substr($inputStr,0,2 ) == '*-') 
 		{
 			return nomalDiceRoller("2d6".'-'.substr($inputStr,2,strlen($inputStr)) );
+		}
+		else
+		{
+			return nomalDiceRoller("2d6");
 		}
 	}
 	
