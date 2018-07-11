@@ -292,18 +292,20 @@ function parseInput ($inputStr){
 	}else if(stristr($inputStr, '判') !=false)
 	{
 
-		if(substr($inputStr,0,2 ) == '判+')
-		{
+
 			return nomalDiceRoller("2d6");
-		}
-		elseif (substr($inputStr,0,2 ) == '判-') 
-		{
-			return nomalDiceRoller("2d6");
-		}
+	
 
 	}else if(stristr($inputStr, '*') !=false)
 	{
+		if(substr($inputStr,0,2 ) == '*+')
+		{
 			return nomalDiceRoller("2d6");
+		}
+		elseif (substr($inputStr,0,2 ) == '*-') 
+		{
+			return nomalDiceRoller("2d6");
+		}
 	}
 	
 	
