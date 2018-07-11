@@ -294,7 +294,14 @@ function parseInput ($inputStr){
 
  	    if(substr($inputStr,0,4) == "判+")
 		{
+
 			return nomalDiceRoller("2d6");
+
+		}else if (substr($inputStr,0,4) == '判-') 
+		{
+
+			return nomalDiceRoller("2d6");
+
 		}
 
 	
