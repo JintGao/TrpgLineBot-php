@@ -324,11 +324,51 @@ function parseInput ($inputStr){
 		{
 			return nomalDiceRoller("2d6");
 		}
+
+	}else if(stristr($inputStr, '*') !=false)
+	{
+		if(substr($inputStr,0,2 ) == '*+')
+		{
+			return nomalDiceRoller("2d6".'+'.substr($inputStr,2,strlen($inputStr)) );
+		}
+		else if (substr($inputStr,0,2 ) == '*-') 
+		{
+			return nomalDiceRoller("2d6".'-'.substr($inputStr,2,strlen($inputStr)) );
+		}
+		else if($inputStr=="*")
+		{
+			return nomalDiceRoller("2d6");
+		}
+	
+	}else if($userName=="Tony高志")
+	{
+			$googledataspi = "https://spreadsheets.google.com/feeds/list/1Hux0vPFA47hZgjPYcoHvMzHP4Q_azPZYDZKnD6H5r78/od6/public/values?alt=json";
+
+			$json = file_get_contents($googledataspi);
+        	$data = json_decode($json, true);     
+        	$store_text=''; 
+			//foreach ($data['feed']['entry'] as $item) 
+			//{    
+				//if($rplyArr[3]  == $item['gsx$姓名']['$t'])
+				//{                
+                //	$store_text = $item['content']['$t'];
+                //}                 
+			//}
+                return $data['feed']['entry'][0]['gsx$content']['$t'];
 	}
-	
-	
+
 	else {
-	return null;
+
+		//if($store_text == '')
+		//{
+		//	$store_text = '呱，沒有這個人或索取的資料喔，建議用 "角色資訊 全部 角色名稱" ，查欄位資料!';
+		//}		
+
+		//return $store_text;
+
+
+
+		return null;
 	}
 }
 
