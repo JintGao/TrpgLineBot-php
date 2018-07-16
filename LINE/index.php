@@ -368,7 +368,7 @@ function parseInput ($inputStr){
 
 
 
-		return $userName."你好";
+		return "你好";
 	}
 }
 
