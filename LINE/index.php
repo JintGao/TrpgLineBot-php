@@ -343,7 +343,7 @@ function parseInput ($inputStr){
 	}else if($inputStr=="123")
 	{
 
-          return "123456789";
+          return nomalDiceRoller("2d6");
 	}
 
 	else {
