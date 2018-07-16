@@ -368,7 +368,7 @@ function parseInput ($inputStr){
 
 
 
-		return null;
+		return $userName;
 	}
 }
 
