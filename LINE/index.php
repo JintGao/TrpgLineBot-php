@@ -22,6 +22,7 @@ require_once('./Dice/Dice_nomalDice.php');
 require_once('./Dice/Dice_pbta.php');
 require_once('./Dice/Dice_extraDice.php');
 require_once('./Dice/Dice_test.php');
+require_once('./RulesCustomize.php');
 
 //主要的全域變數，只有簡易的API，覺得難過香菇
 //試著手動加入了getProfile的功能…不知道是否用得到
@@ -303,40 +304,14 @@ function parseInput ($inputStr){
 			return nomalDiceRoller("2d6".'-'.substr($inputStr,4,strlen($inputStr)) ) ;
 
 		}
-		else if(stristr($inputStr, '勇') !=false)
-		{
 
-			return nomalDiceRoller("2d6");		
-
-		}
-		else if(stristr($inputStr, '敏') !=false)
-		{
-
-			return nomalDiceRoller("2d6");
-		}
-		else if(stristr($inputStr, '魅') !=false)
-		{
-
-			return nomalDiceRoller("2d6");
-		}
-		else if(stristr($inputStr, '意') !=false)
-		{
-
-			return nomalDiceRoller("2d6");
-		}
-		else if(stristr($inputStr, '智') !=false)
-		{
-			return nomalDiceRoller("2d6");
-
-		}
-		else if(stristr($inputStr, '精') !=false)
-		{
-			return nomalDiceRoller("2d6");
-
-		}
 		else if($inputStr=="判")
 		{
 			return nomalDiceRoller("2d6");
+		}
+		else
+		{
+			return Rules_Operating($inputStr,$userName);
 		}
 
 	
