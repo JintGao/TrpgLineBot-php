@@ -309,10 +309,7 @@ function parseInput ($inputStr){
 		{
 			return nomalDiceRoller("2d6");
 		}
-		else
-		{
-			return Rules_Operating($inputStr,$userName);
-		}
+
 
 	
 
