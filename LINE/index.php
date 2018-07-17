@@ -343,7 +343,7 @@ function parseInput ($inputStr){
 	}else if($inputStr=="123")
 	{
 
-          return nomalDiceRoller("2d6");
+          return "你好";
 	}
 
 	else {
