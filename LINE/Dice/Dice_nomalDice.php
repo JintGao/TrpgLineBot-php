@@ -66,7 +66,7 @@ function nomalDiceRoller($inputStr){
 	return buildTextMessage($finalStr);	
 }
 
-function nomalDiceRoller_Customize($inputStr,$inputStr,$player){
+function nomalDiceRoller_Customize($inputStr,$say,$player){
 	error_log("是【一般擲骰】啦，媽ㄉ發科！");
 	
 //先定義要輸出的Str
