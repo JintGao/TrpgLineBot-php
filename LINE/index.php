@@ -351,7 +351,7 @@ function parseInput ($inputStr){
 	}
 	else if($inputStr=="456")
 	{
-		return Rules_Operating($inputStr,$userName)
+		return Rules_Operating($inputStr,$userName);
 	}
 	else {
 		return null;
