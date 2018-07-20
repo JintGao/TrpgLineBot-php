@@ -351,7 +351,7 @@ function parseInput ($inputStr){
 	}
 	else if($inputStr=="456")
 	{
-		return buildTextMessage("123");
+		return Rules_Operating($inputStr,$userName)
 	}
 	else {
 		return null;
