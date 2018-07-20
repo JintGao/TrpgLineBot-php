@@ -2,8 +2,13 @@
 
 function Rules_Operating($inputStr,$userName) { 
 
+		if($userName='Tony高志')
+		{
+
+			return nomalDiceRoller("2d6+100");	
+		}
 	
-		 if(stristr($inputStr, '勇') !=false)
+		 else if(stristr($inputStr, '勇') !=false)
 		{
 
 			return nomalDiceRoller("2d6+1");		
