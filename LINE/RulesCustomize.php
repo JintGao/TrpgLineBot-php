@@ -2,5 +2,5 @@
 
 function Rules_Operating($inputStr,$userName) { 
 
-	return buildTextMessage($userName);	
+	return $userName;	
 }
