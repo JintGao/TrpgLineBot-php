@@ -121,7 +121,7 @@ function nomalDiceRoller_Customize($inputStr,$say,$player){
 			return null;
 		}
 	
-		$finalStr = "基本擲骰（".$mutiOrNot."）：\n→".DiceCal($mutiOrNot)['eqStr'];
+		$finalStr = $player." ".$say."（".$mutiOrNot."）：\n→".DiceCal($mutiOrNot)['eqStr'];
 	
 	}
 	
