@@ -13,7 +13,7 @@ function Rules_Operating($inputStr,$userName) {
 
 			if(stristr($inputStr, 'data') !=false)
 			{
-			     return  $data['feed']['entry'][0]['content']['$t'];
+			     return  buildTextMessage($data['feed']['entry'][0]['content']['$t']);
 			}
 			else if(stristr($inputStr, '勇') !=false)
 			{
