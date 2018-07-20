@@ -11,7 +11,7 @@ function Rules_Operating($inputStr,$userName) {
 		if($userName='Tony高志')
 		{
 
-			if(stristr($inputStr, 'data') !=false)
+			if(stristr($inputStr, '資料') !=false)
 			{
 			     return  buildTextMessage('OK');
 			}
