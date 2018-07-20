@@ -2,9 +2,20 @@
 
 function Rules_Operating($inputStr,$userName) { 
 
+
+		$googledataspi = "https://spreadsheets.google.com/feeds/list/1-VL6Fl88f2iBIv3vIqjMbHQZFjSzGJRkKWnHp8gqRQE/od6/public/values?alt=json";
+		$json = file_get_contents($googledataspi);
+	    $data = json_decode($json, true); 
+	    $store_text='';
+
 		if($userName='Tony高志')
 		{
-			if(stristr($inputStr, '勇') !=false)
+
+			if(stristr($inputStr, 'data') !=false)
+			{
+			     return  $data['feed']['entry'][0]['content']['$t'];
+			}
+			else if(stristr($inputStr, '勇') !=false)
 			{
 			     return nomalDiceRoller("2d6+1");		
 			}
@@ -273,8 +284,6 @@ function Rules_Operating($inputStr,$userName) {
 			}
 		}	
 	
-	 
-
 
 		return null;
 }
