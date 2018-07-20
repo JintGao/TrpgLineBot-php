@@ -13,7 +13,7 @@ function Rules_Operating($inputStr,$userName) {
 
 			if(stristr($inputStr, 'data') !=false)
 			{
-			     return  buildTextMessage($googledataspi);
+			     return  buildTextMessage('OK');
 			}
 			else if(stristr($inputStr, '勇') !=false)
 			{
