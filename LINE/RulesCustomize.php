@@ -13,7 +13,7 @@ function Rules_Operating($inputStr,$userName) {
 	    	if($userName == $item['gsx$玩家名稱']['$t'])
 	    	{
 
-				$player = $item['gsx$玩家名稱']['$t'];
+				$player = $item['gsx$姓名']['$t'];
 
 	    		$序號 = $item['gsx$序號']['$t'];
 
