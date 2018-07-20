@@ -17,27 +17,27 @@ function Rules_Operating($inputStr,$userName) {
 			}
 			else if($inputStr=='判勇')
 			{
-			     return nomalDiceRoller("2d6");		
+			     return nomalDiceRoller("2d6".$data['feed']['entry'][0]['gsx$勇武加值']['$t']);		
 			}
-			else if(inputStr=='判敏')
+			else if($inputStr=='判敏')
 			{
-			     return nomalDiceRoller("2d6+2");
+			     return nomalDiceRoller("2d6".$data['feed']['entry'][0]['gsx$靈敏加值']['$t']);
 			}
-			else if(inputStr=='判魅')
+			else if($inputStr=='判魅')
 			{
-			     return nomalDiceRoller("2d6+3");
+			     return nomalDiceRoller("2d6".$data['feed']['entry'][0]['gsx$魅力加值']['$t']);
 			}
-			else if(inputStr=='判意')
+			else if($inputStr=='判意')
 			{
-			     return nomalDiceRoller("2d6+4");
+			     return nomalDiceRoller("2d6".$data['feed']['entry'][0]['gsx$意志加值']['$t']);
 			}
-			else if(inputStr=='判智')
+			else if($inputStr=='判智')
 			{
-			     return nomalDiceRoller("2d6+5");
+			     return nomalDiceRoller("2d6".$data['feed']['entry'][0]['gsx$智慧加值']['$t']);
 			}
-			else if(inputStr=='判精')
+			else if($inputStr=='判精')
 			{
-			     return nomalDiceRoller("2d6+6");
+			     return nomalDiceRoller("2d6".$data['feed']['entry'][0]['gsx$精神加值']['$t']);
 			}
 		}	
 		else if($userName='羊(Jasmin)')
