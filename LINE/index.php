@@ -349,7 +349,11 @@ function parseInput ($inputStr){
 
           return buildTextMessage($userName);
 	}
+	}else if($inputStr=="456")
+	{
 
+		 return buildTextMessage(Rules_Operating($inputStr,$userName));
+	}
 	else {
 		return null;
 	}
