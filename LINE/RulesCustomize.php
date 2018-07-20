@@ -3,7 +3,7 @@
 function Rules_Operating($inputStr,$userName) { 
 
 
-		$googledataspi = "https://spreadsheets.google.com/feeds/list/1-VL6Fl88f2iBIv3vIqjMbHQZFjSzGJRkKWnHp8gqRQE/od6/public/values?alt=json";
+		$googledataspi = "https://spreadsheets.google.com/feeds/list/1Hux0vPFA47hZgjPYcoHvMzHP4Q_azPZYDZKnD6H5r78/od6/public/values?alt=json";
 		$json = file_get_contents($googledataspi);
 	    $data = json_decode($json, true); 
 	    $store_text='';
@@ -11,31 +11,31 @@ function Rules_Operating($inputStr,$userName) {
 		if($userName='Tony高志')
 		{
 
-			if(stristr($inputStr, '資料') !=false)
+			if($inputStr=='判資料')
 			{
 			     return  buildTextMessage($data['feed']['entry'][0]['content']['$t']);
 			}
-			else if(stristr($inputStr, '勇') !=false)
+			else if($inputStr=='判勇')
 			{
-			     return nomalDiceRoller("2d6+1");		
+			     return nomalDiceRoller("2d6");		
 			}
-			else if(stristr($inputStr, '敏') !=false)
+			else if(inputStr=='判敏')
 			{
 			     return nomalDiceRoller("2d6+2");
 			}
-			else if(stristr($inputStr, '魅') !=false)
+			else if(inputStr=='判魅')
 			{
 			     return nomalDiceRoller("2d6+3");
 			}
-			else if(stristr($inputStr, '意') !=false)
+			else if(inputStr=='判意')
 			{
 			     return nomalDiceRoller("2d6+4");
 			}
-			else if(stristr($inputStr, '智') !=false)
+			else if(inputStr=='判智')
 			{
 			     return nomalDiceRoller("2d6+5");
 			}
-			else if(stristr($inputStr, '精') !=false)
+			else if(inputStr=='判精')
 			{
 			     return nomalDiceRoller("2d6+6");
 			}
