@@ -309,7 +309,7 @@ function parseInput ($inputStr){
 		}
 		else
 		{
-			return Rules_Operating($inputStr,$keyWord,$manualUrl,$textReplyUrl,$userName);		
+			return Rules_Operating($inputStr,$userName);		
 		}
 
 	
