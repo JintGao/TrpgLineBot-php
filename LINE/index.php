@@ -256,6 +256,7 @@ foreach ($bot->parseEvents() as $event) {
 
 //這是基本判斷式
 function parseInput ($inputStr){
+	global $userId;
 	global $userName;
 	global $keyWord;
 	global $manualUrl;
