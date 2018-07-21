@@ -63,9 +63,6 @@ function nomalDiceRoller($inputStr){
 	
 	}
 	
-	return buildTextMessage($finalStr);	
-}
-
 function nomalDiceRoller_Attack($inputStr,$say,$player){
 	error_log("是【一般擲骰】啦，媽ㄉ發科！");
 	
@@ -124,7 +121,8 @@ function nomalDiceRoller_Attack($inputStr,$say,$player){
 		$finalStr = "基本擲骰（".$mutiOrNot."）：\n→".DiceCal($mutiOrNot)['eqStr'];
 	
 	}
-	
+
+
 	return buildTextMessage($finalStr);	
 }
 
