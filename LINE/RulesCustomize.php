@@ -57,7 +57,7 @@ function Rules_Operating($inputStr,$userName) {
 				}
 				else if($inputStr=='判三')
 				{
-					 $skill = $data['feed']['entry'][$序號]['gsx$c攻擊招式']['$t']
+					 $skill = $data['feed']['entry'][$序號]['gsx$c攻擊招式']['$t'];
 				     return nomalDiceRoller_Attack($data['feed']['entry'][$序號]['gsx$c攻擊數值']['$t'],$inputStr,$player,$skill);
 				}
 
