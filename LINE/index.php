@@ -153,8 +153,17 @@ foreach ($bot->parseEvents() as $event) {
 			$message = $event['message'];			
 			$source = $event['source'];
 			if($source['type'] == "group"){		
-				$userName = $bot->getProfile($source['userId'])['displayName'];
-				error_log("訊息發送人：".$userName);
+				
+				$groupId = $source['groupId'];
+				$userId = $source['userId'];
+				error_log("群組ID：".$groupId);
+				if($userId != null){
+					$userName = $bot->getProfile($source['userId'])['displayName'];							
+					error_log("訊息發送人：".$userName);
+					}
+				else{
+					error_log("訊息發送人：不明");
+				}
 				}
 			if($source['type'] == "user"){
 				$userName = $bot->getProfile($source['userId'])['displayName'];
