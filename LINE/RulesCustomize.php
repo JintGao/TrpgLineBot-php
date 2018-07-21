@@ -45,15 +45,15 @@ function Rules_Operating($inputStr,$userName) {
 				{
 				     return nomalDiceRoller_Customize("2d6".$data['feed']['entry'][$序號]['gsx$精神加值']['$t'],$inputStr,$player);
 				}	    		
-				else if($inputStr=='判A'||$inputStr=='判一')
+				else if($inputStr=='判c'||$inputStr=='判一')
 				{
 				     return nomalDiceRoller_Customize("2d6".$data['feed']['entry'][$序號]['gsx$a攻擊數值']['$t'],$inputStr,$player);
 				}				
-				else if($inputStr=='判B'||$inputStr=='判二')
+				else if($inputStr=='判c'||$inputStr=='判二')
 				{
 				     return nomalDiceRoller_Customize("2d6".$data['feed']['entry'][$序號]['gsx$b攻擊數值']['$t'],$inputStr,$player);
 				}
-				else if($inputStr=='判C'||$inputStr=='判三')
+				else if($inputStr=='判c'||$inputStr=='判三')
 				{
 				     return nomalDiceRoller_Customize("2d6".$data['feed']['entry'][$序號]['gsx$c攻擊數值']['$t'],$inputStr,$player);
 				}
