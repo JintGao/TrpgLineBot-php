@@ -67,7 +67,7 @@ function nomalDiceRoller($inputStr){
 }
 
 
-function nomalDiceRoller_Attack($inputStr,$say,$player){
+function nomalDiceRoller_Attack($inputStr,$say,$player,$skill){
 	error_log("是【一般擲骰】啦，媽ㄉ發科！");
 	
 //先定義要輸出的Str
