@@ -158,7 +158,8 @@ foreach ($bot->parseEvents() as $event) {
 				$userId = $source['userId'];
 				error_log("群組ID：".$groupId);
 				if($userId != null){
-					$userName = $bot->getProfile($source['userId'])['displayName'];							
+					$userName = $bot->getProfile($source['userId'])['displayName'];
+					$userId = $source['userId'];							
 					error_log("訊息發送人：".$userName);
 					}
 				else{
@@ -167,6 +168,7 @@ foreach ($bot->parseEvents() as $event) {
 				}
 			if($source['type'] == "user"){
 				$userName = $bot->getProfile($source['userId'])['displayName'];
+				$userId = $source['userId'];
 				error_log("訊息發送人：".$userName);
 				}
 			
