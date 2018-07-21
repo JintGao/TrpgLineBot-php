@@ -169,6 +169,10 @@ foreach ($bot->parseEvents() as $event) {
 				$userName = $bot->getProfile($source['userId'])['displayName'];
 				error_log("訊息發送人：".$userName);
 				}
+			if($source['type'] == "room"){
+
+				$userId = $source['room'];
+			}
 			
 			
 			//對訊息類別做篩選
