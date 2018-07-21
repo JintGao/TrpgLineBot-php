@@ -310,7 +310,7 @@ function parseInput ($inputStr){
 		}
 		else
 		{
-			return buildTextMessage(Rules_Operating($inputStr,$userName));
+			return Rules_Operating($inputStr,$userName);		
 		}
 
 	
@@ -350,12 +350,10 @@ function parseInput ($inputStr){
 
           return buildTextMessage($userName);
 	}
-	}else if($inputStr=="456")
+	else if($inputStr=="456")
 	{
-
-		 return Rules_Operating($inputStr,$userName);
+		return Rules_Operating($inputStr,$userName);
 	}
-
 	else {
 		return null;
 	}
