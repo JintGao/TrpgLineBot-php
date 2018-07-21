@@ -122,8 +122,8 @@ function nomalDiceRoller_Attack($inputStr,$say,$player,$skill){
 			return null;
 		}
 	
-		$finalStr = $player." "."使用".$skill."造成"."（".$mutiOrNot."）：\n→".DiceCal($mutiOrNot)['eqStr'];
-	
+		$finalStr = $player." ".$skill."（".$mutiOrNot."）：\n→".DiceCal($mutiOrNot)['eqStr'];
+
 	}
 
 
