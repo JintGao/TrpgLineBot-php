@@ -262,6 +262,3 @@ function RollDice($inputStr){
   
   return $finalStr;
 }
-
-
-
