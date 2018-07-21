@@ -63,6 +63,10 @@ function nomalDiceRoller($inputStr){
 	
 	}
 	
+	return buildTextMessage($finalStr);	
+}
+
+
 function nomalDiceRoller_Attack($inputStr,$say,$player){
 	error_log("是【一般擲骰】啦，媽ㄉ發科！");
 	
@@ -262,3 +266,6 @@ function RollDice($inputStr){
   
   return $finalStr;
 }
+
+
+
