@@ -56,8 +56,10 @@ function Rules_Operating($inputStr,$userName) {
 				else if($inputStr=='判C'||$inputStr=='判三')
 				{
 				     return nomalDiceRoller_Customize("2d6".$data['feed']['entry'][$序號]['gsx$c攻擊數值']['$t'],$inputStr,$player);
-				}								
+				}
 
+
+				     return  buildTextMessage($inputStr);
 	    	}
 
 
