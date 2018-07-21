@@ -154,16 +154,8 @@ foreach ($bot->parseEvents() as $event) {
 			$source = $event['source'];
 			if($source['type'] == "group"){		
 				
-				$groupId = $source['groupId'];
-				$userId = $source['userId'];
-				error_log("群組ID：".$groupId);
-				if($userId != null){
-					$userName = $bot->getProfile($source['userId'])['displayName'];							
-					error_log("訊息發送人：".$userName);
-					}
-				else{
-					error_log("訊息發送人：不明");
-				}
+				$userName = $bot->getProfile($source['userId'])['displayName'];
+				error_log("訊息發送人：".$userName);
 				}
 			if($source['type'] == "user"){
 				$userName = $bot->getProfile($source['userId'])['displayName'];
@@ -310,7 +302,7 @@ function parseInput ($inputStr){
 		}
 		else
 		{
-			return Rules_Operating($inputStr,$userName);		
+			return buildTextMessage(Rules_Operating($inputStr,$userName));
 		}
 
 	
@@ -350,10 +342,12 @@ function parseInput ($inputStr){
 
           return buildTextMessage($userName);
 	}
-	else if($inputStr=="456")
+	}else if($inputStr=="456")
 	{
-		return Rules_Operating($inputStr,$userName);
+
+		 return Rules_Operating($inputStr,$userName);
 	}
+
 	else {
 		return null;
 	}
