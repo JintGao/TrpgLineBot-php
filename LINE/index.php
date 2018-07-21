@@ -36,7 +36,7 @@ $yababangUrl = getenv('YABABANG_URL');
 //GOOGLE表單
 $bot = new LINEBotTiny($channelAccessToken, $channelSecret);
 $userName = '你';
-
+$userId ='無';
 
 //建立文字訊息的函數
 function buildTextMessage($inputStr){	
