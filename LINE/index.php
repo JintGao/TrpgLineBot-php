@@ -352,7 +352,7 @@ function parseInput ($inputStr){
 	}
 	else if($inputStr=="456")
 	{
-		return buildTextMessage($userId);;
+		return buildTextMessage($userId);
 	}
 	else {
 		return null;
