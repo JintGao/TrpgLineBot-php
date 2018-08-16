@@ -44,7 +44,11 @@ function Rules_Operating($inputStr,$userName) {
 				else if($inputStr=='判精'||$inputStr=='判精神')
 				{
 				     return nomalDiceRoller_Customize("2d6".$data['feed']['entry'][$序號]['gsx$精神加值']['$t'],$inputStr,$player);
-				}	    		
+				}	
+				else if($inputStr=='判防')
+				{
+				     return nomalDiceRoller_Customize("2d6".$data['feed']['entry'][$序號]['gsx$防禦數值']['$t'],$inputStr,$player);
+				}	  				
 				else if($inputStr=='判一')
 				{
 					 $skill = $data['feed']['entry'][$序號]['gsx$a攻擊招式']['$t'];
