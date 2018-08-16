@@ -47,8 +47,10 @@ function Rules_Operating($inputStr,$userName) {
 				}	
 				else if($inputStr=='判防')
 				{
-				     $skill = '防禦';
-				     return nomalDiceRoller_Attack($data['feed']['entry'][$序號]['gsx$防禦數值']['$t'],$inputStr,$player,$skill);
+				     return nomalDiceRoller_Customize("2d6".$data['feed']['entry'][$序號]['gsx$防禦數值']['$t'],$inputStr,$player);
+
+				     //$skill = '防禦';
+				     //return nomalDiceRoller_Attack($data['feed']['entry'][$序號]['gsx$防禦數值']['$t'],$inputStr,$player,$skill);
 				}	  				
 				else if($inputStr=='判一')
 				{
