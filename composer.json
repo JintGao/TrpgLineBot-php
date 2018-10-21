@@ -2,4 +2,7 @@
   "require-dev": {
     "heroku/heroku-buildpack-php": "*"
   }
+ "require": {
+ "asimlqt/php-google-spreadsheet-client": "3.0.*" 
+ }
 }
