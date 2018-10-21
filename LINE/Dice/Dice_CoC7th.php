@@ -175,7 +175,7 @@ function CoC7th_DNF($inputStr){
 		
   
   //設定回傳訊息
-	$ReStr = "CoC7th擲骰：\n(1D100<=".$chack.") → ";
+	$ReStr = "地下城冒險擲骰：\n(1D100<=".$chack.") → ";
 
   //先骰兩次十面骰作為起始值。為什麼要這樣呢，因為獎懲骰的部分十面骰需要重骰，這樣到時候會簡單一點。
 	$TenRoll = Dice(10) ;
@@ -189,7 +189,7 @@ function CoC7th_DNF($inputStr){
 	//先設定最終結果等於第一次擲骰
 	$finalRoll = $firstRoll;
           
-
+  /*
   //判斷是否為成長骰
   if(preg_match ("/^cc>\d+/", $inputStr) != false){
 	error_log("是成長骰啦，媽ㄉ發科！");	  
@@ -240,11 +240,18 @@ function CoC7th_DNF($inputStr){
 		}
 		$ReStr = $ReStr.$tempStr." \n→ ";      
 	}  
+	*/
 
     //結果判定
-	if ($finalRoll == 1){$ReStr = $ReStr.$finalRoll." → 恭喜！大成功！";}
+	if ($finalRoll <= 20){$ReStr = $ReStr.$finalRoll." → 爆擊！";}
 	else
-	if ($finalRoll == 100){$ReStr = $ReStr.$finalRoll." → 啊！大失敗！";}
+	if ($finalRoll <= $chack){$ReStr = $ReStr.$finalRoll." → 成功!";}
+	else
+	{$ReStr = $ReStr.$finalRoll." → 失敗!" ;}
+
+	
+    /*
+	if ($finalRoll == 100){$ReStr = $ReStr.$finalRoll." → 大失敗！";}
 	else
 	if ($finalRoll <= 99 && $finalRoll > 95 && $chack < 50){$ReStr = $ReStr.$finalRoll." → 啊！大失敗！";}
     else
@@ -262,7 +269,7 @@ function CoC7th_DNF($inputStr){
             else
               if(chack/5 < 50){$ReStr = $ReStr + "\n（若要求極限成功則為大失敗）";}
           }  
-	
+
 	if(stristr(strtolower($ReStr),"啊！大失敗") != false){
 		$fumbleImgArr =Array(
 			"https://i.imgur.com/ju9UQzA.png",
@@ -292,6 +299,7 @@ function CoC7th_DNF($inputStr){
 		
 		return $messages->send($replyArr);
 	}
+	*/
 	
           return buildTextMessage($ReStr);	
 }
