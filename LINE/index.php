@@ -276,7 +276,10 @@ function parseInput ($inputStr){
 		
 	}else if (preg_match ("/^cc/i", $inputStr)){
 		return CoC7th($inputStr);
-		
+
+	}else if (preg_match ("/^dd/i", $inputStr)){
+		return CoC7th($inputStr);	
+
 	}else if(preg_match ("/^pb/i", $inputStr)){		
 		return pbta($inputStr);
 		
