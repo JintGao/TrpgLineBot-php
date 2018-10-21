@@ -164,14 +164,14 @@ function CoC7th_DNF($inputStr){
   //接下來就是主要的擲骰部分啦！
   //如果不是正確的格式，直接跳出
   
-	if(preg_match ("/<=/", $inputStr) == false && preg_match ("/cc>/", $inputStr) == false){
-		error_log("取出值不符合骰子格式");
-		return null;
-	}	
+//	if(preg_match ("/<=/", $inputStr) == false && preg_match ("/cc>/", $inputStr) == false){
+//		error_log("取出值不符合骰子格式");
+//		return null;
+//	}	
   
   
   //記錄檢定要求值，簡單來說就是取 = 後的「整數」部分，parseInt就是強制取整
-	$chack = (int)explode("=",$inputStr)[1];
+	$chack = (int)explode("dd",$inputStr)[1];
 		
   
   //設定回傳訊息
