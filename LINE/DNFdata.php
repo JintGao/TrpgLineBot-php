@@ -7,11 +7,12 @@ function DNF_Operating($inputStr,$userName) {
 		$json = file_get_contents($googledataspi);
 	    $data = json_decode($json, true); 
 
-	    $序號 =  (int)explode("goto",$inputStr)[1];;
+	    $序號 =  (int)explode("go",$inputStr)[1] -1 ;
 
-	    if($序號 > -1)
+	    if($序號 > 0)
 	    {
 			return  buildTextMessage($data['feed']['entry'][$序號]['gsx$內容']['$t']);	
 	    } 
 
+	    	return null;
 }
