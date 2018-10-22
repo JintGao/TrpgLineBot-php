@@ -353,7 +353,7 @@ function parseInput ($inputStr){
 			return nomalDiceRoller("2d6");
 		}
 	
-	}else if(stristr($inputStr, 'd') !=false)
+	}else if($inputStr=="789")
 	{
 		//return DNF_Operating($inputStr,$userName);	
 		 return buildTextMessage($userName);	
