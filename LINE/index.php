@@ -352,9 +352,8 @@ function parseInput ($inputStr){
 			return nomalDiceRoller("2d6");
 		}
 	
-	}else if($inputStr=="地下城")
+	}else if(stristr($inputStr, "goto") !=false)
 	{
-
        return DNF_Operating($inputStr,$userName);	
 
 	}else if($inputStr=="123")
