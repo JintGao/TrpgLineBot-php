@@ -355,7 +355,7 @@ function parseInput ($inputStr){
 	}else if($inputStr=="地下城")
 	{
 
-       return buildTextMessage($userName);
+       return Rules_Operating($inputStr,$userName);	
 
 	}else if($inputStr=="123")
 	{
