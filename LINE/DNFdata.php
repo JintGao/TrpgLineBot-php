@@ -21,6 +21,4 @@ function DNF_Operating($inputStr,$userName) {
 	    	
 		}*/	
 	
-
-		return null;
 }
