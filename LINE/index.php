@@ -354,7 +354,7 @@ function parseInput ($inputStr){
 	}else if($inputStr=="123")
 	{
 
-          return buildTextMessage("你好123");
+          return buildTextMessage("你好124553");
 	}
 	else if($inputStr=="456")
 	{
