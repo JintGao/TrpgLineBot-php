@@ -7,7 +7,7 @@ function DNF_Operating($inputStr,$userName) {
 		$json = file_get_contents($googledataspi);
 	    $data = json_decode($json, true); 
 
-	    $序號 =  (int)explode("goto",$inputStr)[1] -1 ;
+	    $序號 =  (int)explode("go",$inputStr)[1];
 
 	 
 	   return  buildTextMessage($序號);	
