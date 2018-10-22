@@ -8,8 +8,10 @@ function DNF_Operating($inputStr,$userName) {
 	    $data = json_decode($json, true); 
 	    $skill='';
 
+		return  buildTextMessage('安安成功');	
+	      
 
-	    return  buildTextMessage($data['feed']['entry'][0]['gsx$內容']['$t']);	
+	    //return  buildTextMessage($data['feed']['entry'][0]['gsx$內容']['$t']);	
 	        
 	    /*
 	    foreach ($data['feed']['entry'] as $item) 
