@@ -352,7 +352,7 @@ function parseInput ($inputStr){
 			return nomalDiceRoller("2d6");
 		}
 	
-	}else if(stristr($inputStr, "goto") !=false)
+	}else if(stristr($inputStr, "go") !=false)
 	{
        return DNF_Operating($inputStr,$userName);	
 
