@@ -8,7 +8,7 @@ function DNF_Operating($inputStr,$userName) {
 	    $data = json_decode($json, true); 
 	    $skill='';
 
-		return  buildTextMessage($googledataspi);	
+		return  buildTextMessage($data['feed']['entry']['0']['gsx$內容']['$t']);	
 	      
 	
 }
