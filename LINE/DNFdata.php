@@ -9,8 +9,7 @@ function DNF_Operating($inputStr,$userName) {
 
 	    $序號 =  (int)explode("goto",$inputStr)[1] -1 ;
 
-	    if($序號 > -1)
-	    {
-		return  buildTextMessage($data['feed']['entry'][$序號]['gsx$內容']['$t']);	
-	    } 
+	 
+	   return  buildTextMessage($序號);	
+	   
 }
