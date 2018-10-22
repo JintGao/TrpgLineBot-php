@@ -23,8 +23,6 @@ require_once('./Dice/Dice_pbta.php');
 require_once('./Dice/Dice_extraDice.php');
 require_once('./Dice/Dice_test.php');
 require_once('./RulesCustomize.php');
-require_once('./DNFdata.php');
-
 
 //主要的全域變數，只有簡易的API，覺得難過香菇
 //試著手動加入了getProfile的功能…不知道是否用得到
@@ -353,15 +351,10 @@ function parseInput ($inputStr){
 			return nomalDiceRoller("2d6");
 		}
 	
-	}else if($inputStr=="789")
-	{
-		//return DNF_Operating($inputStr,$userName);	
-		 return buildTextMessage($userName);	
-
 	}else if($inputStr=="123")
 	{
 
-          return buildTextMessage("你好");
+          return buildTextMessage($userName);
 	}
 	else if($inputStr=="456")
 	{
