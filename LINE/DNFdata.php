@@ -10,17 +10,5 @@ function DNF_Operating($inputStr,$userName) {
 
 		return  buildTextMessage($googledataspi);	
 	      
-
-	    //return  buildTextMessage($data['feed']['entry'][0]['gsx$內容']['$t']);	
-	        
-	    /*
-	    foreach ($data['feed']['entry'] as $item) 
-	    {
-
-	    	$格子 = $item['gsx$格子']['$t'];
-
-	    	return  buildTextMessage($data['feed']['entry'][$格子]['gsx$內容']['$t']);
-	    	
-		}*/	
 	
 }
