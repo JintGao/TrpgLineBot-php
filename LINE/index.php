@@ -367,7 +367,7 @@ function parseInput ($inputStr){
 	}
 	else if($inputStr=="全體擲敏")
 	{
-		return "凡恩" + nomalDiceRoller("2d10+2");
+		return nomalDiceRoller("2d10+2");
 	}
 	else {
 		return null;
