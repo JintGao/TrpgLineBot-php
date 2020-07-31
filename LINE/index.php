@@ -367,7 +367,7 @@ function parseInput ($inputStr){
 	}
 	else if($inputStr=="全體擲敏")
 	{
-                $user1Name='凡恩';
+                $user1Name="凡恩";
 		$user1 = nomalDiceRoller("2d10+2");
 		return $user1Name.$user1;
 	}
