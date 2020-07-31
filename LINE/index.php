@@ -369,7 +369,15 @@ function parseInput ($inputStr){
 	{
                 $user1Name="凡恩:";
 		$user1num = rand(1,10)+rand(1,10)+2;
-		return  buildTextMessage($user1Name.$user1num);
+		$user2Name="莘琪貳:";
+		$user2num = rand(1,10)+rand(1,10)+2;
+		$user3Name="卡蹦:";
+		$user3num = rand(1,10)+rand(1,10)+3;
+		$user4Name="黎白散:";
+		$user4num = rand(1,10)+rand(1,10)+1;
+		$user5Name="大肚:";
+		$user5num = rand(1,10)+rand(1,10)+1;
+		return  buildTextMessage($user1Name.$user1num." ".$user2Name.$user2num." ".$user3Name.$user3num." ".$user4Name.$user4num." ".$user5Name.$user5num);
 	}
 	else {
 		return null;
