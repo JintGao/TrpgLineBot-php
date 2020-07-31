@@ -354,7 +354,7 @@ function parseInput ($inputStr){
 	
 	}else if(stristr($inputStr, "go") !=false)
 	{
-       return DNF_Operating($inputStr,$userName);	
+          return DNF_Operating($inputStr,$userName);	
 
 	}else if($inputStr=="123")
 	{
@@ -367,7 +367,7 @@ function parseInput ($inputStr){
 	}
 	else if($inputStr=="全體擲敏")
 	{
-		return "凡恩" + nomalDiceRoller("2d10+2")
+		return "凡恩" + nomalDiceRoller("2d10+2");
 	}
 	else {
 		return null;
