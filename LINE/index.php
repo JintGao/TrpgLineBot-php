@@ -369,7 +369,7 @@ function parseInput ($inputStr){
 	{
                 $user1Name="凡恩";
 		$user1 = nomalDiceRoller("2d10+2");
-		return $user1Name.$user1;
+		return  buildTextMessage($user1Name.$user1);
 	}
 	else {
 		return null;
