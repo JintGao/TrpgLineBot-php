@@ -367,7 +367,7 @@ function parseInput ($inputStr){
 	}
 	else if($inputStr=="全體擲敏")
 	{
-		return "凡恩" + nomalDiceRoller("2d10+2")+" 莘琪貳" +nomalDiceRoller("2d10+2")+" 卡蹦˙爵士"+nomalDiceRoller("2d10+3") +" 黎白散" +nomalDiceRoller("2d10+1")+" 歐姆格·大肚"+nomalDiceRoller("2d10+1");
+		return "凡恩" + nomalDiceRoller("2d10+2")
 	}
 	else {
 		return null;
